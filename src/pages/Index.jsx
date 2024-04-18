@@ -1,15 +1,19 @@
-// Complete the Index page component here
-// Use chakra-ui
-import { Button } from "@chakra-ui/react"; // example
-import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
+import { Button, Box, Center, Text } from "@chakra-ui/react";
+import { FaClipboardList } from "react-icons/fa";
 
 const Index = () => {
-  // TODO: Create the website here!
   return (
-    <Button>
-      Hello world! <FaPlus />
-    </Button>
-  ); // example
+    <Center h="100vh" bg="gray.100">
+      <Box p={8} bg="white" boxShadow="md" borderRadius="lg">
+        <Text fontSize="2xl" mb={4} fontWeight="bold" textAlign="center">
+          Join Our Waitlist
+        </Text>
+        <Button size="lg" colorScheme="teal" leftIcon={<FaClipboardList />} onClick={() => alert("Placeholder for waitlist functionality")}>
+          Sign Up Now
+        </Button>
+      </Box>
+    </Center>
+  );
 };
 
 export default Index;
